@@ -1,0 +1,7 @@
+.header__nav-desktop {
+  display: flex;
+  margin-left: 50px;
+}
+.header__nav-menu-desktop {
+  margin: auto !important;
+}

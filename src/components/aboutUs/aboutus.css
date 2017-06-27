@@ -1,0 +1,34 @@
+.aboutus-component {
+  padding: 50px;
+  background-image: url('../../images/bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.aboutus__main_text {
+  text-align: center;
+  font-size: 1.3em;
+}
+.aboutus__list {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+.aboutus__list-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.aboutus__left-block {
+  width: 50%;
+}
+.aboutus__right-block {
+  width: 50%;
+}
+.aboutus__block-title {
+  text-align: center;
+  font-size: 1.5em;
+}

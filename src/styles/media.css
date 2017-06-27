@@ -1,0 +1,68 @@
+@media screen and (max-width: 770px) {
+  /* Offers */
+  .offers-component {
+    padding: 120px 20px  0 20px !important;
+  }
+  .offers-component__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .offers-component__title  {
+    font-size: 1.6em !important;
+  }
+  .diagnostic-text {
+    font-size: 1.5em !important;
+  }
+  .offer-container {
+    width: 100% !important;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* Services */
+  .aboutus-component {
+    padding: 20px !important;
+  }
+  .services-component {
+    padding: 10px !important;
+  }
+  .services__frame-component {
+    padding: 10px !important;
+  }
+  .services__frame-component {
+    width: 100% !important;
+  }
+
+  /* About us*/
+  .aboutus__list-wrapper {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .aboutus__left-block {
+    width: 100% !important;
+  }
+  .aboutus__right-block {
+    width: 100% !important;
+  }
+
+  /* Contacts */
+  .contacts-component {
+    padding: 20px !important;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .contacts__map-btn {
+    margin-bottom: 20px !important;
+  }
+  .feedback__form {
+    width: 100% !important;
+  }
+  .contacts__map-dialog-container {
+    width: 100% !important;
+  }
+}

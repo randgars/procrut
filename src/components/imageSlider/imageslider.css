@@ -1,0 +1,9 @@
+.image-gallery-image {
+    height: calc(100vh - 300px)
+}
+.image-gallery-fullscreen-button:hover::before,
+.image-gallery-play-button:hover::before,
+.image-gallery-left-nav:hover::before,
+.image-gallery-right-nav:hover::before {
+    color: #8E8E8E !important
+}
