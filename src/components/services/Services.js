@@ -260,13 +260,15 @@ class Services extends React.Component {
   render() {
     return (
       <div className="services-component">
-          <Paper zDepth={2} className="services__frame-component services__brake-bg">
-            <Subheader className="services__frame-title">Тормоза</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Тормоза <img className="services__frame-images" src="../../images/brake.png" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody  displayRowCheckbox={this.state.showCheckboxes}>
                 { brakeService.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -276,13 +278,15 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__frame-bg">
-            <Subheader className="services__frame-title">Рама</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Рама <img className="services__frame-images" src="../../images/frame.png" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { frameServices.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -292,13 +296,15 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__fork-bg">
-            <Subheader className="services__frame-title">Вилка</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Вилка <img className="services__frame-images" src="../../images/fork.png" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { forkServices.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -308,13 +314,15 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__carriage-bg">
-            <Subheader className="services__frame-title">Каретка</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Каретка <img className="services__frame-images" src="../../images/carriage.png" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { carriageService.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -324,13 +332,15 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__wheel-bg">
-            <Subheader className="services__frame-title">Колесо</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Колесо <img className="services__frame-images" src="../../images/wheel.png" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { wheelServices.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -340,13 +350,16 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__handlebar-bg">
-            <Subheader className="services__frame-title">Руль / Сидение</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Руль <img className="services__frame-images" src="../../images/handlebar.jpg" alt=""/></div>
+              <div className="services__title-block">Сидение <img className="services__frame-images" src="../../images/seat.jpg" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { handlebarService.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -356,13 +369,16 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__pedal-bg">
-            <Subheader className="services__frame-title">Шатуны / Педали</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Шатуны <img className="services__frame-images" src="../../images/rod.jpg" alt=""/></div>
+              <div className="services__title-block">Педали <img className="services__frame-images" src="../../images/pedal.jpg" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { pedalService.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>
@@ -372,13 +388,17 @@ class Services extends React.Component {
               </TableBody>
             </Table>
           </Paper>
-          <Paper zDepth={2} className="services__frame-component services__chain-bg">
-            <Subheader className="services__frame-title">Переключатели / Цепь / Звезды</Subheader>
+          <Paper zDepth={2} className="services__frame-component">
+            <Subheader className="services__frame-title">
+              <div className="services__title-block">Переключатели <img className="services__frame-images" src="../../images/gear-selector.jpg" alt=""/></div>
+              <div className="services__title-block">Цепь <img className="services__frame-images" src="../../images/chain.jpg" alt=""/></div>
+              <div className="services__title-block">Звезды <img className="services__frame-images" src="../../images/gear-wheel.jpg" alt=""/></div>
+            </Subheader>
             <Table className="services__frame-table" selectable={false}>
               <TableBody displayRowCheckbox={this.state.showCheckboxes} >
                 { chainService.map((item, index) => {
                     return (
-                      <TableRow displayBorder={false} key={index}>
+                      <TableRow key={index}>
                         <TableRowColumn className="service__frame-service">{item.service}</TableRowColumn>
                         <TableRowColumn className="service__frame-price">{item.price}</TableRowColumn>
                       </TableRow>

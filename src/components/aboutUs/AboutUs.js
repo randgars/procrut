@@ -1,6 +1,7 @@
 import React from 'react';
 import './aboutus.css';
 import Scroll from 'react-scroll';
+import Paper from 'material-ui/Paper';
 
 const Element = Scroll.Element;
 
@@ -17,25 +18,26 @@ class AboutUs extends React.Component {
         Ремонт любой сложности для нас не проблема! А доступные цены Вас приятно удивят.</p>
         <p className="aboutus__main_text">Обратившись к нам, Вам не нужно будет беспокоиться об неисправности вашего велосипеда – она будет быстро и качественно устранена! Наши мастера работают с любым типом ремонта и с любым производителем.</p>
         <div className="aboutus__list-wrapper">
-          <div className="aboutus__left-block">
+          <Paper zDepth={2} className="aboutus__left-block">
             <p className="aboutus__block-title">Наши преимущества</p>
             <ul className="aboutus__ul">
               <li className="aboutus__list">Мы предлагаем бесплатную диагностику велосипеда</li>
               <li className="aboutus__list">Быстро определим неисправности</li>
               <li className="aboutus__list">Работаем без выходных в любое удобное для Вас время</li>
-              <li className="aboutus__list">Обратившись к нам, вы получите бесплатную консультацию по всем вопросам, касающимся велосипеда</li>
+              <li className="aboutus__list">Бесплатная консультация</li>
               <li className="aboutus__list">Наши опытные мастера ответят на любые ваши вопросы</li>
             </ul>
-          </div>
-          <div className="aboutus__right-block">
+          </Paper>
+          <Paper zDepth={2} className="aboutus__right-block">
             <p className="aboutus__block-title">Наш критерии просты</p>
             <ul className="aboutus__ul">
               <li className="aboutus__list">Качество</li>
               <li className="aboutus__list">Доступность</li>
               <li className="aboutus__list">Быстрота</li>
               <li className="aboutus__list">Надёжность</li>
+              <li className="aboutus__list">Высокий уровень профессионализма</li>
             </ul>
-          </div>
+          </Paper>
         </div>
       </div>
     );

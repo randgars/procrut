@@ -6,6 +6,8 @@
   background-attachment: fixed;
   color: #fff;
   display: flex;
+  
+  box-shadow: inset 0px 15px 10px 0px rgba(255, 255, 255, 1);
   flex-direction: column;
 }
 .aboutus__main_text {
@@ -19,14 +21,23 @@
 }
 .aboutus__list-wrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  align-items: stretch;
+  justify-content: space-between;
+  color: #414141;
+  margin-top: 30px; 
+	flex-flow: row wrap;
 }
 .aboutus__left-block {
-  width: 50%;
+  width: 45%;
+  padding: 10px 40px 40px 40px;
+  min-width: 400px;
+  margin-bottom: 30px;
 }
 .aboutus__right-block {
-  width: 50%;
+  width: 45%;
+  padding: 10px 40px 40px 40px;
+  min-width: 400px;
+  margin-bottom: 30px;
 }
 .aboutus__block-title {
   text-align: center;

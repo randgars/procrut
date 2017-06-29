@@ -3,7 +3,6 @@
   box-sizing: border-box;
   min-height: calc(100vh - 50px);
   padding: 50px;
-  
   align-items: stretch;
 	flex-flow: row wrap;
 	justify-content: space-around;
@@ -25,6 +24,10 @@
   font-weight: normal !important;
   text-align: center;
   padding: 0 !important;
+  display: flex;
+  align-items: center;
+	flex-flow: row wrap;
+  justify-content: space-around;
 }
 .service__frame-service {
   width: 50% ;
@@ -32,51 +35,16 @@
   overflow: auto !important;
   font-size: 1em !important;
 }
-.service__frame-header {
+.services__title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .service__frame-price {
   width: 20%;
   text-align: center !important;
   font-size: 1em !important;
 }
-
-.services__brake-bg {
-  background-image: url("../../images/brake.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__frame-bg {
-  background-image: url("../../images/frame.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__fork-bg {
-  background-image: url("../../images/fork.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__carriage-bg {
-  background-image: url("../../images/carriage.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__wheel-bg {
-  background-image: url("../../images/wheel.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__handlebar-bg {
-  background-image: url("../../images/handlebar.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__pedal-bg {
-  background-image: url("../../images/pedal.png");
-  background-size: cover;
-  background-position: center;
-}
-.services__chain-bg {
-  background-image: url("../../images/chain.png");
-  background-size: cover;
-  background-position: center;
+.services__frame-images {
+  height: 60px;
 }
