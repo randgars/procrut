@@ -1,0 +1,77 @@
+.header {
+  background: rgba(80, 80, 80, 0.8) !important;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  color: #fff;
+  height: 70px !important;
+}
+.header__nav-item>div>span {
+  display: flex !important;
+  align-items: center !important;
+}
+.header__nav-item-custom>div>span>div>div {
+  border-right: solid 1px #fff !important;
+}
+.header__nav-item>div>span>div>div {
+  color: #fff !important;
+  font-size: 1.2em !important;
+  padding: 0 25px !important;
+  line-height: 1.5em;
+}
+.header__logo-wrapper {
+  background: rgba(80, 80, 80, 0.8) !important;
+  position: absolute;
+  top: 0;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 70px;
+  height:70px;
+  border-radius: 0 0 250px 250px;
+}
+.header__logo {
+  width: 130px;
+  z-index: 999;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  cursor: pointer;
+}
+.header__contact {
+  font-size: 1.2em !important;
+  color: #fff !important;
+  position: fixed !important;
+  top: 0;
+  right: 90px;
+  z-index: 999;
+  line-height: 70px;
+}
+.header__contact_custom {
+  top: 70px;
+  right: 0;
+  background: rgba(80, 80, 80, 0.8);
+  width: 350px;
+  line-height: 2.2em;
+  border-radius: 0 0 0 50px;
+  padding: 10px 0;
+}
+.header__contact_custom li {
+  text-align: center;
+}
+.header__phone-ico {
+  color: #fff !important;
+  cursor: pointer;
+}
+.header__list-ico {
+  width: 25px;
+  margin-left: 10px;
+}
+.divider__list-item {
+  background-image: linear-gradient(to left, rgba(80, 80, 80, 0), #fff, rgba(80, 80, 80, 0));
+  background-image: -webkit-linear-gradient(to left, rgba(80, 80, 80, 0), #fff, rgba(80, 80, 80, 0));
+  background-image: -moz-linear-gradient(to left, rgba(80, 80, 80, 0), #fff, rgba(80, 80, 80, 0));
+}

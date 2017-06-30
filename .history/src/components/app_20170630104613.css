@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #000;
+  background: #fff;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.divider {
+  border: 0;
+  height: 1px;
+  width: 70%;
+  background-image: linear-gradient(to left, #fff, #880E4F, #fff);
+  background-image: -webkit-linear-gradient(to left, #fff, #880E4F, #fff);
+  background-image: -moz-linear-gradient(to left, #fff, #880E4F, #fff);
+}
+.wrapper__image-slider {
+  height: auto;
+  margin-top: 50px;
+}
+.wrapper__title-container {
+  box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, 1);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #565656;
+  font-size: 1.4em;
+}
+.wrapper__title-container_custom-about-us {
+  box-shadow: none;
+  color: #fff;
+  font-size: 1.6em;
+}
+
+@media screen and (max-width: 1260px) {
+  .offers-component__wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .offer-container {
+    width: 100% !important;
+    margin-bottom: 50px;
+    cursor: pointer;
+    position: relative;
+  }
+}
+@media screen and (max-width: 770px) {
+  /* Offers */
+  .offers-component {
+    padding: 120px 20px  0 20px !important;
+  }
+  .offers-component__title  {
+    font-size: 1.6em !important;
+  }
+  .diagnostic-text {
+    font-size: 1.5em !important;
+  }
+
+  /* Services */
+  .aboutus-component {
+    padding: 20px !important;
+  }
+  .services-component {
+    padding: 10px !important;
+  }
+  .services__frame-component {
+    padding: 10px !important;
+  }
+  .services__frame-component {
+    width: 100% !important;
+  }
+
+  /* About us*/
+  .aboutus__list-wrapper {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .aboutus__left-block {
+    width: 100% !important;
+  }
+  .aboutus__right-block {
+    width: 100% !important;
+  }
+
+  /* Contacts */
+  .contacts-component {
+    padding: 20px !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .contacts__map-btn {
+    margin: 0 auto 20px auto !important;
+    width: 200px;
+  }
+  .feedback__form {
+    width: 100% !important;
+  }
+  .contacts__map-dialog-container {
+    width: 100% !important;
+  }
+}
