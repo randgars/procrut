@@ -21,13 +21,11 @@
   margin-bottom: 10px;
 }
 .feedback__form {
-  display: flex;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
   width: 30%;
-  flex-direction: column;
-  align-items: center;
   padding: 40px;
   min-width: 330px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 .feedback__form-title {
   font-size: 1.3em;
@@ -36,26 +34,40 @@
   color: #5C5C5C;
 }
 .feedback__field {
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
   margin: 10px 0 !important;
   width: 100% !important;
 }
 .feedback__btn {
-  margin-top: 20px ;
+  margin: 20px auto 0 auto;
+  display: block !important;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
 }
 .contacts__contacts-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+  font-size: 1.3em;
+}
+.vk_groups {
+  margin: auto;
 }
 .contacts__contacts-info {
   text-align: center;
-  padding: 0 20px 20px 20px;
+  margin-bottom: 10px;
 }
 .contacts__contacts-info li {
   line-height: 1.5em;
 }
 .vk-group-item {
   color: #F7ADAF;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
   text-decoration: none;
+}
+.contacts__our-info {
+  margin: 0 0 5px 0;
+  text-align: center;
+  white-space: pre-wrap
+}
+.contacts__contact-ico {
+  width: 20px;
 }

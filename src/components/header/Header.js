@@ -5,6 +5,7 @@ import DesktopMenu from './desktopMenu/DesktopMenu';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import IconButton from 'material-ui/IconButton';
 import PhoneIco from 'material-ui/svg-icons/communication/phone';
+import MoreVert from 'material-ui/svg-icons/navigation/more-vert';
 import EmailIco from 'material-ui/svg-icons/communication/email';
 import Scroll from 'react-scroll';
 
@@ -69,22 +70,22 @@ class Header extends React.Component {
         <ToolbarGroup>
           {
             this.state.desktop &&
-            <span className="header__contact">+375 (29) 66-999-22</span>
+            <span className="header__contact"><img className="header__contact-ico" src="../../images/vel.png" alt=""/>+375 (29) 66-999-22</span>
           }
           {
             this.state.displayNumber &&
             <ul className="header__contact header__contact_custom">
-              <li>+375 (29) 55-622-00<PhoneIco className="header__phone-ico header__list-ico"/></li>
+              <li><img className="header__contact-ico" src="../../images/mts.png" alt=""/> +375 (29) 55-622-00<PhoneIco className="header__phone-ico header__list-ico"/></li>
               <hr className="divider divider__list-item"/>
               <li>procrut@yahoo.com<EmailIco className="header__phone-ico header__list-ico"/></li>
               <hr className="divider divider__list-item"/>
-              <li><a className="vk-group-item" href="https://vk.com/ClubProCrut">Наша группа ВК</a> <img className="header__list-ico" src="../../images/vk.svg" alt=""/></li>
+              <li><a rel="noopener noreferrer" target="_blank" className="vk-group-item" href="https://vk.com/ClubProCrut">Наша группа ВК</a> <img className="header__list-ico" src="../../images/vk.svg" alt=""/></li>
             </ul>
           }
           {
             this.state.desktop &&
             <IconButton onTouchTap={this.openNumber}>
-              <PhoneIco className="header__phone-ico"/>
+              <MoreVert className="header__phone-ico"/>
             </IconButton>
           }
         </ToolbarGroup>

@@ -80,10 +80,10 @@ class MobileMenu extends React.Component {
                   })
                 }
                 <Divider />
-                <MenuItem primaryText="+375 (29) 66-999-22" />
-                <MenuItem primaryText="+375 (29) 55-622-00" />
+                <MenuItem primaryText={<span><img className="header__contact-ico" src="../../images/vel.png" alt=""/>+375 (29) 66-999-22</span>} />
+                <MenuItem primaryText={<span><img className="header__contact-ico" src="../../images/mts.png" alt=""/>+375 (29) 55-622-00</span>} />
                 <MenuItem primaryText="procrut@yahoo.com" />
-                <MenuItem primaryText={<a className="vk-group-item" href="https://vk.com/ClubProCrut">Наша группа ВК</a>}  />
+                <MenuItem primaryText={<a className="vk-group-item" rel="noopener noreferrer" target="_blank" href="https://vk.com/ClubProCrut">Наша группа ВК</a>}  />
               </Menu>
             </Popover>
           </div>

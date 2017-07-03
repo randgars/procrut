@@ -12,14 +12,6 @@ class DesktopMenu extends React.Component {
     this.state = {
       scrollPosition: -90
     };
-    this.handleSetActive = this.handleSetActive.bind(this);
-    this.handleSetInactive = this.handleSetInactive.bind(this);
-  }
-  handleSetActive(test) {
-    debugger
-  }
-  handleSetInactive(test) {
-    debugger
   }
   render() {
     return (
@@ -32,8 +24,6 @@ class DesktopMenu extends React.Component {
             smooth={true}
             offset={this.state.scrollPosition}
             duration={500}
-            onSetActive={this.handleSetActive}
-            onSetInactive={this.handleSetInactive}
             className="header__nav-item header__nav-item-custom"
           >
             <MenuItem primaryText="Наши услуги" />
@@ -45,8 +35,6 @@ class DesktopMenu extends React.Component {
             smooth={true}
             offset={-120}
             duration={500}
-            onSetActive={this.handleSetActive}
-            onSetInactive={this.handleSetInactive}
             className="header__nav-item header__nav-item-custom"
           >
             <MenuItem primaryText="О нас" />
@@ -58,8 +46,6 @@ class DesktopMenu extends React.Component {
             smooth={true}
             offset={this.state.scrollPosition}
             duration={500}
-            onSetActive={this.handleSetActive}
-            onSetInactive={this.handleSetInactive}
             className="header__nav-item"
           >
             <MenuItem primaryText="Контакты" />

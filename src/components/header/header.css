@@ -11,6 +11,7 @@
 .header__nav-item>div>span {
   display: flex !important;
   align-items: center !important;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
 }
 .header__nav-item-custom>div>span>div>div {
   border-right: solid 1px #fff !important;
@@ -49,6 +50,10 @@
   right: 90px;
   z-index: 999;
   line-height: 70px;
+}
+.header__contact-ico {
+  width: 20px;
+  margin-right: 10px;
 }
 .header__contact_custom {
   top: 70px;

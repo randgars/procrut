@@ -32,12 +32,14 @@
   padding: 10px 40px 40px 40px;
   min-width: 400px;
   margin-bottom: 30px;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
 }
 .aboutus__right-block {
   width: 45%;
   padding: 10px 40px 40px 40px;
   min-width: 400px;
   margin-bottom: 30px;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
 }
 .aboutus__block-title {
   text-align: center;

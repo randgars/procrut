@@ -26,10 +26,12 @@
 .diagnostic-text span {
   text-decoration: underline;
 }
-.diagnostic-text p {
+.diagnostic-text h2 {
   margin: 0 0 10px 0;
   width: 50%;
   text-align: center;
+  font-weight: normal;
+  font-size: 1.1em;
 }
 .offers-component__wrapper {
   display: flex;
@@ -38,7 +40,7 @@
   flex-flow: row wrap;
 }
 .offers-component__title {
-  font-size: 2.2em;
+  font-size: 2.3em;
   color: #fff;
   text-align: center;
   margin: 20px auto;
@@ -59,6 +61,7 @@
   flex-direction: column;
   cursor: pointer;
   position: relative;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif !important;
   background-color: rgba(246,246,246,1) !important;
 }
 .offer-container__title {
@@ -87,7 +90,7 @@
 }
 
 .shown-block-true {
-  height: auto;
+  height: auto !important;
 }
 .offer-container__list-wrapper {
   height: auto;

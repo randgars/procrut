@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Marmelad', Arial, Helvetica, sans-serif;
   font-size: 1em;
   color: #000;
   background: #fff;
@@ -43,7 +43,7 @@ ul {
   padding: 10px 0;
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1300px) {
   .offers-component__wrapper {
     display: flex !important;
     flex-direction: column !important;
@@ -62,22 +62,52 @@ ul {
     width: 50% !important; 
   }
   .contacts__contacts-block {
-    margin: 50px auto;
+    margin: 20px auto;
+    padding: 0 !important;
   }
   .contacts__map-container {
     margin: auto;
   }
+  .aboutus__list-wrapper {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .aboutus__left-block {
+    width: 100% !important;
+    min-width: 250px !important;
+  }
+  .aboutus__right-block {
+    width: 100% !important;
+    min-width: 250px !important;
+  }
 }
 @media screen and (max-width: 770px) {
+  .header__logo {
+    width: 60px !important;
+  }
+  .header__logo-wrapper {
+    display: none !important;
+  }
   /* Offers */
   .offers-component {
-    padding: 120px 20px  0 20px !important;
+    padding: 80px 20px  0 20px !important;
   }
   .offers-component__title  {
     font-size: 1.6em !important;
   }
   .diagnostic-text {
     font-size: 1.5em !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .diagnostic-text h2 {
+    width: 100% !important;
+  }
+  .offer-container {
+    min-width: 250px !important;
+    height: 500px !important;
   }
 
   /* Services */
@@ -95,17 +125,7 @@ ul {
   }
 
   /* About us*/
-  .aboutus__list-wrapper {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  .aboutus__left-block {
-    width: 100% !important;
-  }
-  .aboutus__right-block {
-    width: 100% !important;
-  }
+
 
   /* Contacts */
   .contacts-component {
@@ -120,6 +140,7 @@ ul {
   }
   .feedback__form {
     width: 100% !important;
+    min-width: 250px !important;
   }
   .contacts__map-dialog-container {
     width: 100% !important;

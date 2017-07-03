@@ -14,7 +14,8 @@ class Contacts extends React.Component {
       desktop: true,
       mobile: false,
       openMap: false,
-      error: null
+      error: null,
+      vkWidgetWidth: 350
     }
     this.openMap = this.openMap.bind(this);
     this.closeMap = this.closeMap.bind(this);
@@ -35,7 +36,6 @@ class Contacts extends React.Component {
     })
   }
   sendMail() {
-    debugger
     let name = this.state.nameValue;
     let phoneNumberValue = this.state.phoneNumberValue;
     if (isNaN(Number(phoneNumberValue))) {
@@ -50,17 +50,17 @@ class Contacts extends React.Component {
         error: null
       })
     }
-    if (name)
-    axios.post('feedback.php', {
+    
+    axios.post('sendform.js', {
       "name": name,
       "phoneNumber": phoneNumberValue
     })
     .then(function (response) {
-      debugger
       window.console.log(response);
+      //document.getElementById(result_id).innerHTML = response;
     })
     .catch(function (error) {
-      debugger
+      //document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
       window.console.log(error);
     });
   }
@@ -71,9 +71,9 @@ class Contacts extends React.Component {
         mobile: true,
         desktop: false
       });
+      this.state.vkWidgetWidth = 280;
     }
-
-    VK.Widgets.Group('vk_groups', {mode: 3, width: '300'}, 148553516);
+    VK.Widgets.Group('vk_groups', {mode: 3, width: this.state.vkWidgetWidth}, 148553516);
   }
   openMap() {
     this.setState({
@@ -122,22 +122,21 @@ class Contacts extends React.Component {
           }
         </div>
         <div className="contacts__contacts-block">
+          <p className="contacts__our-info">Мы работаем без выходных! Звоните нам в любой день и время, либо оставляйте заявку и мы вам перезвоним!</p>
+          <p className="contacts__our-info">Наша мастерская находится по адресу Г.Минск, ул.Ольшевского, д 20</p>
           <ul className="contacts__contacts-info">
-            <li>Мы работаем без выходных! Звоните нам в любой день и время, либо оставляйте заявку и мы вам перезвоним!</li>
-            <li>Наша мастерская находится по адресу Г.Минск, ул.Ольшевского, д 20</li>
-            <li>+375 (29) 66-999-22</li>
-            <li>+375 (29) 55-622-00</li>
+            <li><img className="header__contact-ico" src="../../images/vel.png" alt=""/> +375 (29) 66-999-22</li>
+            <li><img className="contacts__contact-ico" src="../../images/mts.png" alt=""/> +375 (29) 55-622-00</li>
             <li>procrut@yahoo.com</li>
             <li></li>
           </ul>
-          <div id="vk_groups"></div>
+          <div id="vk_groups" className="vk_groups"></div>
           
         </div>
         
         
         <Paper zDepth={2} className="feedback__form">
           <p className="feedback__form-title">Оставьте ваш номер телефона и мы вам перезвоним</p>
-          <Divider />
           <TextField
             hintText="Имя"
             floatingLabelText="Имя"

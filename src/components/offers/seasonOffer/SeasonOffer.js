@@ -36,7 +36,7 @@ class SeasonOffer extends React.Component {
             <Divider/>
             <ListItem disabled={true} className="offer-container__item" primaryText="Чистка и регулировка тормозов" />
             <Divider/>
-            <ListItem disabled={true} className="offer-container__item" primaryText="Переборка педалей" />
+            <ListItem disabled={true} className="offer-container__item" primaryText="Переборка вилки" />
             <Divider/>
             <ListItem disabled={true} className="offer-container__item" primaryText="Переборка втулок колес" />
             <Divider/>
