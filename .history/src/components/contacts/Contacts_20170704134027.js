@@ -40,7 +40,6 @@ class Contacts extends React.Component {
     const config = {
       headers: {'Content-Type': "application/x-www-form-urlencoded"}
     };
-    //"#^\+[0-9]{12}+$#";
     if (isNaN(Number(phoneNumberValue))) {
       this.setState({
         ...this.state,

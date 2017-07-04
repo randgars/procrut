@@ -14,7 +14,8 @@ class Contacts extends React.Component {
       desktop: true,
       mobile: false,
       openMap: false,
-      error: null
+      error: null,
+      vkWidgetWidth: 350
     }
     this.openMap = this.openMap.bind(this);
     this.closeMap = this.closeMap.bind(this);
@@ -38,9 +39,8 @@ class Contacts extends React.Component {
     let name = this.state.nameValue;
     let phoneNumberValue = this.state.phoneNumberValue;
     const config = {
-      headers: {'Content-Type': "application/x-www-form-urlencoded"}
+      "Content-Type": "application/x-www-form-urlencoded"
     };
-    //"#^\+[0-9]{12}+$#";
     if (isNaN(Number(phoneNumberValue))) {
       this.setState({
         ...this.state,
@@ -53,11 +53,17 @@ class Contacts extends React.Component {
         error: null
       })
     }
-    axios.post('http://pro-crut.by/feedback.php', 'name=' + name + '&phone=' + phoneNumberValue, config)
+    
+    axios.post('sendform.js', {
+      "name": name,
+      "phoneNumber": phoneNumberValue
+    }, config)
     .then(function (response) {
       window.console.log(response);
+      //document.getElementById(result_id).innerHTML = response;
     })
     .catch(function (error) {
+      //document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
       window.console.log(error);
     });
   }
@@ -68,11 +74,9 @@ class Contacts extends React.Component {
         mobile: true,
         desktop: false
       });
-      VK.Widgets.Group('vk_groups', {mode: 3, width: 280}, 148553516);
-    } else {
-      VK.Widgets.Group('vk_groups', {mode: 3, width: 350}, 148553516);
+      this.state.vkWidgetWidth = 280;
     }
-    
+    VK.Widgets.Group('vk_groups', {mode: 3, width: this.state.vkWidgetWidth}, 148553516);
   }
   openMap() {
     this.setState({
@@ -134,6 +138,7 @@ class Contacts extends React.Component {
         </div>
         <Paper zDepth={2} className="feedback__form">
           <p className="feedback__form-title">Оставьте ваш номер телефона и мы вам перезвоним</p>
+          <form method="POST" id="feedback-form">
             <TextField
               hintText="Имя"
               floatingLabelText="Имя"
@@ -150,6 +155,7 @@ class Contacts extends React.Component {
               name="contactFF"
             />
             <RaisedButton primary={true} onTouchTap={this.sendMail} label="Отправить" className="feedback__btn"/>
+          </form>
         </Paper>
       </div>
     );

@@ -40,7 +40,6 @@ class Contacts extends React.Component {
     const config = {
       headers: {'Content-Type': "application/x-www-form-urlencoded"}
     };
-    //"#^\+[0-9]{12}+$#";
     if (isNaN(Number(phoneNumberValue))) {
       this.setState({
         ...this.state,
@@ -53,11 +52,16 @@ class Contacts extends React.Component {
         error: null
       })
     }
-    axios.post('http://pro-crut.by/feedback.php', 'name=' + name + '&phone=' + phoneNumberValue, config)
+    debugger
+    axios.post('http://localhost:8000/feedback.php', 'name=' + name + '&phone=' + phoneNumberValue, config)
     .then(function (response) {
+      debugger
       window.console.log(response);
+      //document.getElementById(result_id).innerHTML = response;
     })
     .catch(function (error) {
+      debugger
+      //document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
       window.console.log(error);
     });
   }
@@ -134,6 +138,7 @@ class Contacts extends React.Component {
         </div>
         <Paper zDepth={2} className="feedback__form">
           <p className="feedback__form-title">Оставьте ваш номер телефона и мы вам перезвоним</p>
+          <form method="POST" id="feedback-form">
             <TextField
               hintText="Имя"
               floatingLabelText="Имя"
@@ -149,7 +154,8 @@ class Contacts extends React.Component {
               errorText={this.state.error}
               name="contactFF"
             />
-            <RaisedButton primary={true} onTouchTap={this.sendMail} label="Отправить" className="feedback__btn"/>
+            <RaisedButton primary={true} onTouchTap={this.sendMail} label="Отправить" className="feedback__btn"><input type="submit" className="feedback__submit-btn"/></RaisedButton>
+          </form>
         </Paper>
       </div>
     );

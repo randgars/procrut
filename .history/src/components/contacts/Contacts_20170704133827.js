@@ -40,7 +40,6 @@ class Contacts extends React.Component {
     const config = {
       headers: {'Content-Type': "application/x-www-form-urlencoded"}
     };
-    //"#^\+[0-9]{12}+$#";
     if (isNaN(Number(phoneNumberValue))) {
       this.setState({
         ...this.state,
@@ -53,11 +52,14 @@ class Contacts extends React.Component {
         error: null
       })
     }
+    debugger
     axios.post('http://pro-crut.by/feedback.php', 'name=' + name + '&phone=' + phoneNumberValue, config)
     .then(function (response) {
       window.console.log(response);
+      //document.getElementById(result_id).innerHTML = response;
     })
     .catch(function (error) {
+      //document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
       window.console.log(error);
     });
   }
